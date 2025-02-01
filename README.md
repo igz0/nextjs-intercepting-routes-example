@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Intercepting Routes Example
 
-## Getting Started
+This is a demo blog application showcasing Next.js App Router features, specifically [Intercepting Routes](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes) and [Parallel Routes](https://nextjs.org/docs/app/building-your-application/routing/parallel-routes).
 
-First, run the development server:
+![Intercepting Routes Demo](https://github.com/user-attachments/assets/2792fb75-c32f-4962-b7fe-3852358b033d)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Live Demo
+
+[https://nextjs-intercepting-routes-example-igz0.vercel.app/articles](https://nextjs-intercepting-routes-example-igz0.vercel.app/articles)
+
+## Features
+
+- Article list page with responsive design
+- Desktop: Articles open in a modal (using Intercepting Routes)
+- Mobile: Articles open as a full page
+- Parallel Routes for modal implementation (@modal)
+
+## Project Structure
+
+```
+src/app/
+├── _constants/
+│   └── articles.ts         # Article data
+├── articles/
+│   ├── (list)/            # Article list page
+│   │   ├── @modal/        # Modal implementation
+│   │   │   └── (...)articles/[id]/
+│   │   └── page.tsx       # List view
+│   └── (details)/         # Article detail page
+│       └── [id]/
+│           └── page.tsx   # Detail view
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technical Details
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Built with Next.js App Router
+- Demonstrates modern routing patterns:
+  - Intercepting Routes: Modal views on desktop
+  - Parallel Routes: Modal implementation
+  - Dynamic Routes: Article pages
