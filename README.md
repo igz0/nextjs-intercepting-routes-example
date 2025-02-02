@@ -11,9 +11,9 @@ This is a demo blog application showcasing Next.js App Router features, specific
 ## Features
 
 - Article list page with responsive design
-- Desktop: Articles open in a modal (using Intercepting Routes)
+- Desktop: Articles open in a sidebar (using Parallel Routes)
 - Mobile: Articles open as a full page
-- Parallel Routes for modal implementation (@modal)
+- Parallel Routes for sidebar implementation (@sidebar)
 
 ## Project Structure
 
@@ -23,7 +23,7 @@ src/app/
 │   └── articles.ts         # Article data
 ├── articles/
 │   ├── (list)/            # Article list page
-│   │   ├── @modal/        # Modal implementation
+│   │   ├── @sidebar/        # Sidebar implementation
 │   │   │   └── (...)articles/[id]/
 │   │   └── page.tsx       # List view
 │   └── (details)/         # Article detail page
@@ -35,6 +35,6 @@ src/app/
 
 - Built with Next.js App Router
 - Demonstrates modern routing patterns:
-  - Intercepting Routes: Modal views on desktop
-  - Parallel Routes: Modal implementation
+  - Intercepting Routes: Sidebar views on desktop
+  - Parallel Routes: Sidebar implementation
   - Dynamic Routes: Article pages
